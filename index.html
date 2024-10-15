@@ -19,45 +19,53 @@
           <h1 class="mb-3">Registro</h1>
           <hr class="my-4">
           <div class="row g-3">
+            
+            <!-- Nombre -->
             <div class="col-sm-6">
               <label for="nombre" class="form-label">Nombre</label>
               <input type="text" class="form-control" id="nombre" required>
               <div class="invalid-feedback">Debe ingresar un nombre.</div>
             </div>
 
+            <!-- Apellido -->
             <div class="col-sm-6">
               <label for="apellido" class="form-label">Apellido</label>
               <input type="text" class="form-control" id="apellido" required>
               <div class="invalid-feedback">Debe ingresar un apellido.</div>
             </div>
 
+            <!-- Email -->
             <div class="col-12">
               <label for="email" class="form-label">Email</label>
               <input type="email" class="form-control" id="email" required>
               <div class="invalid-feedback">Debe ingresar un email.</div>
             </div>
 
+            <!-- Contraseña -->
             <div class="col-sm-6">
               <label for="password1" class="form-label">Contraseña</label>
               <input type="password" class="form-control" id="password1" required>
               <div class="invalid-feedback">Debe ingresar una contraseña con al menos 6 caracteres.</div>
             </div>
 
+            <!-- Repetir contraseña -->
             <div class="col-sm-6">
               <label for="password2" class="form-label">Repetir contraseña</label>
               <input type="password" class="form-control" id="password2" required>
               <div class="invalid-feedback">Debe ingresar igual a "contraseña".</div>
             </div>
 
+            <!-- Términos del servicio -->
             <div class="col-sm-12">
-              <button type="button" class="btn btn-link ps-0" data-bs-toggle="modal"
+              <button type="input" id="termsText" class="btn btn-link ps-0" data-bs-toggle="modal"
                 data-bs-target="#modalTerminos">Términos del servicio</button>
+              <div class="invalid-feedback" id="termsError">
+                Debe aceptar los términos y servicios.
+              </div>
             </div>
 
-
+            <!-- Botón de Registro -->
             <button class="btn btn-primary" type="submit">Registrarme</button>
-
-
           </div>
         </div>
       </form>
@@ -72,6 +80,7 @@
     </footer>
   </div>
 
+  <!-- Modal al clickar los términos de servicio -->
   <div class="modal fade" id="modalTerminos" tabindex="-1" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
